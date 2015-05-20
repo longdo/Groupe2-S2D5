@@ -1,0 +1,21 @@
+﻿La génération a démarré 20/05/2015 15:55:35.
+     1>Projet "C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Composant2\Composant2.vcxproj" sur le nœud 2 (build cible(s)).
+     1>InitializeBuildStatus:
+         Création de "Debug\Composant2.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       ClCompile:
+         Toutes les sorties sont à jour.
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug" Composant7.lib Composant6.lib /MANIFEST /ManifestFile:"Debug\Composant2.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.lib" /MACHINE:X86 /DLL Debug\Composant2.obj
+     1>Composant2.obj : warning LNK4075: ' /EDITANDCONTINUE' ignoré à cause de la spécification '/INCREMENTAL:NO'
+            Création de la bibliothèque C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.lib et de l'objet C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.exp
+         Composant2.vcxproj -> C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.dll
+       Manifest:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.dll;#2" /manifest Debug\Composant2.dll.intermediate.manifest "c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+       FinalizeBuildStatus:
+         Suppression du fichier "Debug\Composant2.unsuccessfulbuild".
+         Mise à jour de l'horodatage "Debug\Composant2.lastbuildstate".
+     1>Génération du projet "C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Composant2\Composant2.vcxproj" terminée (build cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:00.72

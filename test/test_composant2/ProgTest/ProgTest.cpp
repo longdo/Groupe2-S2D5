@@ -1,4 +1,4 @@
-// test_composant2.cpp : définit les fonctions exportées pour l'application DLL.
+// test_composant2.cpp?: d?finit les fonctions export?es pour l'application DLL.
 //
 
 #include "stdafx.h"
@@ -24,47 +24,7 @@ bool testGetPath(string exception, const string expectedExceptions[], vector<dou
 	int i=0;
 	if(exception !="")
 	{
-		cout<<exception<<"EXCEPTION RECEIVED"<<endl;
-		/*
-		if ( exception == expectedExceptions[0] )
-		{
-			bool wrongType = false;
-			do
-			{	
-				wrongType = ( typeid(returnedArray.at(i++)).name() != "double"); 
-			}
-			while (i < T && !wrongType) ;
-			correctBehaviour = wrongType;
-			if(!correctBehaviour)
-				cout<<"FAILED : WRONG TYPE EXCEPTION TRIGGERED WHEREAS IT SHOULD NOT"<<endl;
-		}
-		else if (expectedExceptions[1] == exception)
-		{
-			
-			bool negativeValue = false;
-			do
-			{	
-				negativeValue = ( returnedArray.at(i++) < 0 );
-			}
-			while (i < T && !negativeValue) ;
-			correctBehaviour = negativeValue;
-			if(!correctBehaviour)
-				cout<<"FAILED : NEGATIVE VALUE EXCEPTION TRIGGERED WHEREAS IT SHOULD NOT"<<endl;
-		}
-
-		else if(expectedExceptions[2] == exception )
-		{
-			bool missedValue = false;
-			i= 0;
-			correctBehaviour = returnedArray.size() < T;
-			if(correctBehaviour)
-				cout<<"GET PATH TESTS OK"<<endl<<endl<<endl;
-			else
-				cout<<"FAILED : MISSING VALUES TRIGGERED WHEREAS IT SHOULD NOT"<<endl;
-		}
-		else
-			cout<<"FAILED : UNKNOWN EXCEPTION "<<endl;
-		*/
+		//cout<<exception<<" EXCEPTION RECEIVED"<<endl;
 	}
 	else
 	{
@@ -76,9 +36,7 @@ bool testGetPath(string exception, const string expectedExceptions[], vector<dou
 			if(!correctBehaviour)
 			{
 				cout<<type<<endl;
-				if (type !="double") 
-					cout<<"FAILED : WRONG TYPE OF DATA EXCEPTION UNTRINGGERED. Type is : "<<type<<endl;
-				else if (returnedArray.size() < T )
+				if (returnedArray.size() < T )
 					cout<<"FAILED : MISSING DATA EXCEPTION UNTRIGGERED. Size is : "<<returnedArray.size()<<endl;
 				else //if(returnedArray.at(i) <0 )
 					cout<<"FAILED : NEGATIVE VALUE EXCEPTION UNTRIGGERED : value in the array is "<< returnedArray.at(0) <<endl;
@@ -105,7 +63,7 @@ int _tmain(int argc, char* argv[])
 	int maturity[5], nbIterations[5];
 	double strike[5];
 	string payOff[5], exception="";
-	getPathErrors[0] = "WRONG TYPE OF DATA",
+	getPathErrors[0] = "WRONG TYPE OF DATA"; // REMOVED FROM SPECIFICATIONS
 	getPathErrors[1] = "NEGATIVE VALUE";
 	getPathErrors[2] = "MISSED DATA";
 	
@@ -144,7 +102,7 @@ int _tmain(int argc, char* argv[])
 	payOff[0] = "CALL";
 	payOff[1] = "PUT";
 	payOff[2] = "PUT";
-	payOff[3] = "404 NOT FOUND";
+	payOff[3] = "";
 	payOff[4] = "CALL";
 	nbIterations[0]= 3;
 	nbIterations[1]= 2;
@@ -156,10 +114,10 @@ int _tmain(int argc, char* argv[])
 	strike[2] = 15;
 	strike[3] = 15;
 	strike[4] = 15;
-	doMcErrors[0] = "WRONG TYPE OF DATA";
+	//doMcErrors[0] = "WRONG TYPE OF DATA"; //==> removed from specis
 	doMcErrors[1] = "NEGATIVE VALUE";
 	doMcErrors[2] = "MISSED DATA";// IMPOSSIBLE TO TEST ==> This error has been detected sooner
-	i = 1;
+	i = 0;
 	do
 	{
 		// 1 test negative value exceptions for maturity, number of trials, strike
@@ -191,7 +149,7 @@ int _tmain(int argc, char* argv[])
 			transform(s.begin(),s.end(),s.begin(),::toupper); // convert toUpper case a string
 			correctBehaviour = (s == doMcErrors[1]); 
 			if(!correctBehaviour)
-				cout<<"FAILED : NEGATIVE VALUE EXCEPTION EXPECTED. RECEIVED : '"<< s<<"'"<<endl;
+				cout<<"MISSING DATA EXCEPTION UNTRIGGERED. RECEIVED : '"<< s<<"'"<<endl;
 		}
 	}
 	
@@ -216,7 +174,7 @@ int _tmain(int argc, char* argv[])
 	system("pause");
 	maturity[0] = T;
 	maturity[1] = T;
-	maturity[2] = T;
+	maturity[2] = -T;
 	maturity[3] = T;
 	maturity[4] = T;
 	payOff[0] = "-1";
@@ -229,17 +187,17 @@ int _tmain(int argc, char* argv[])
 	strike[2] = 15;
 	strike[3] = 15;
 	strike[4] = 15;
-	pricePathErrors[0] = "WRONG TYPE OF DATA",
+	pricePathErrors[0] = "WRONG TYPE OF DATA"; // DOES NOT EXISTS ANYMORE
 	pricePathErrors[1] = "NEGATIVE VALUE";
 	pricePathErrors[2] = "MISSED DATA";
 	pricePathErrors[3] = "VALUE GRATER THAN 1 000 000";
 	vector <double>path;
 	for (i = 0 ; i < T ; i++)
-			path.push_back(0.5);
-	
+		path.push_back(0.5);
+	i=0;
 	do
 	{
-		i=0;
+		exception = "";
 		try
 		{
 			composant->pricePath(payOff[i],path,strike[i],maturity[i]);
@@ -247,13 +205,16 @@ int _tmain(int argc, char* argv[])
 		catch(string s)
 		{
 			transform(s.begin(),s.end(),s.begin(),toupper);
-			correctBehaviour = (s ==pricePathErrors[i]); 
+			correctBehaviour = (s ==pricePathErrors[1]); 
+			exception = s;
 			if(!correctBehaviour)
-				cout<<"FAILED : "<< pricePathErrors[i] <<"EXCEPTION UNTRIGGERED. RECEIVED : '"<<s<<"'"<<endl;
+				cout<<"FAILED : "<< pricePathErrors[1] <<" EXCEPTION UNTRIGGERED. RECEIVED : '"<<s<<"'"<<endl;
 		}
+		if (exception == "")
+			cout<<"FAILED : " << pricePathErrors[1] <<" EXCEPTION UNTRIGGERED "<<endl;
 		i++;
 	}
-	while (correctBehaviour && i < 2);
+	while (correctBehaviour && i < 3);
 	path.pop_back();
 	path.pop_back();
 	try
@@ -263,11 +224,10 @@ int _tmain(int argc, char* argv[])
 	catch(string s)
 	{
 		transform(s.begin(),s.end(),s.begin(),toupper);
-		correctBehaviour = (s == pricePathErrors[i]);
+		correctBehaviour = (s == pricePathErrors[3]);
 		if(!correctBehaviour)
 			cout<<"FAILED : MISSING DATA EXCEPTION UNTRIGGERERD"<<endl;
 	}
-	i = 3;
 	path.push_back(1000001);
 	path.push_back(100);
 	try
