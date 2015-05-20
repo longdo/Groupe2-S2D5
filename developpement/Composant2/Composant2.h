@@ -24,9 +24,6 @@ COMPOSANT2_API int fnComposant2(void);
 
 #include <string>
 #include <vector>
-#include "Composant6.h"
-#include "Composant7.h"
-
 /*#define COMPOSANT2_VERSION 1,0,0,0
 #define COMPOSANT_VERSION_STR "1,0,0,0"*/
 
