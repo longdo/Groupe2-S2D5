@@ -1,0 +1,32 @@
+﻿La génération a démarré 20/05/2015 15:50:07.
+     1>Projet "C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Composant6\Composant6.vcxproj" sur le nœud 2 (rebuild cible(s)).
+     1>_PrepareForClean:
+         Suppression du fichier "Debug\Composant6.lastbuildstate".
+       InitializeBuildStatus:
+         Création de "Debug\Composant6.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       ClCompile:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D COMPOSANT6_EXPORTS /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Composant6.cpp
+         Composant6.cpp
+       ManifestResourceCompile:
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\Composant6.dll.embed.manifest.res" Debug\Composant6_manifest.rc 
+       Link:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant6.dll" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\Composant6.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant6.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant6.lib" /MACHINE:X86 /DLL Debug\Composant6.dll.embed.manifest.res
+         Debug\Composant6.obj
+            Création de la bibliothèque C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant6.lib et de l'objet C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant6.exp
+       Manifest:
+         Suppression du fichier "Debug\Composant6.dll.embed.manifest".
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /out:"Debug\Composant6.dll.embed.manifest" /manifest Debug\Composant6.dll.intermediate.manifest "c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\rc.exe /nologo /fo"Debug\Composant6.dll.embed.manifest.res" Debug\Composant6_manifest.rc 
+       LinkEmbedManifest:
+         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant6.dll" /INCREMENTAL /NOLOGO /MANIFEST /ManifestFile:"Debug\Composant6.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant6.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant6.lib" /MACHINE:X86 /DLL Debug\Composant6.dll.embed.manifest.res
+         Debug\Composant6.obj
+            Création de la bibliothèque C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant6.lib et de l'objet C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant6.exp
+         Composant6.vcxproj -> C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant6.dll
+       FinalizeBuildStatus:
+         Suppression du fichier "Debug\Composant6.unsuccessfulbuild".
+         Mise à jour de l'horodatage "Debug\Composant6.lastbuildstate".
+     1>Génération du projet "C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Composant6\Composant6.vcxproj" terminée (rebuild cible(s)).
+
+La génération a réussi.
+
+Temps écoulé 00:00:01.20
