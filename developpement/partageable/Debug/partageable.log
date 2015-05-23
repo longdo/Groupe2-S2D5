@@ -1,0 +1,31 @@
+﻿Build started 21/05/2015 10:22:27.
+Project "\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\partageable\partageable.vcxproj" on node 2 (rebuild target(s)).
+_PrepareForClean:
+  Deleting file "Debug\partageable.lastbuildstate".
+InitializeBuildStatus:
+  Creating "Debug\partageable.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\interfaces" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D PARTAGEABLE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\partageable.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+  stdafx.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\interfaces" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D PARTAGEABLE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+  dllmain.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\interfaces" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D PARTAGEABLE_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\partageable.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt partageable.cpp
+  partageable.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\partageable.dll" /INCREMENTAL:NO /NOLOGO /MANIFEST /ManifestFile:"Debug\partageable.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\partageable.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\partageable.lib" /MACHINE:X86 /DLL Debug\dllmain.obj
+  Debug\partageable.obj
+  Debug\stdafx.obj
+  "\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\Composant2.lib"
+dllmain.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+     Creating library \\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\partageable.lib and object \\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\partageable.exp
+  partageable.vcxproj -> \\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\partageable.dll
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\partageable.dll;#2" /manifest Debug\partageable.dll.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+FinalizeBuildStatus:
+  Deleting file "Debug\partageable.unsuccessfulbuild".
+  Touching "Debug\partageable.lastbuildstate".
+Done Building Project "\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\partageable\partageable.vcxproj" (rebuild target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:02.07

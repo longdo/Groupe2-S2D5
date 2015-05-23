@@ -1,21 +1,33 @@
-﻿La génération a démarré 20/05/2015 15:55:35.
-     1>Projet "C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Composant2\Composant2.vcxproj" sur le nœud 2 (build cible(s)).
-     1>InitializeBuildStatus:
-         Création de "Debug\Composant2.unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
-       ClCompile:
-         Toutes les sorties sont à jour.
-       Link:
-         c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.dll" /INCREMENTAL:NO /NOLOGO /LIBPATH:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug" Composant7.lib Composant6.lib /MANIFEST /ManifestFile:"Debug\Composant2.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.lib" /MACHINE:X86 /DLL Debug\Composant2.obj
-     1>Composant2.obj : warning LNK4075: ' /EDITANDCONTINUE' ignoré à cause de la spécification '/INCREMENTAL:NO'
-            Création de la bibliothèque C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.lib et de l'objet C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.exp
-         Composant2.vcxproj -> C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.dll
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Debug\Composant2.dll;#2" /manifest Debug\Composant2.dll.intermediate.manifest "c:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
-       FinalizeBuildStatus:
-         Suppression du fichier "Debug\Composant2.unsuccessfulbuild".
-         Mise à jour de l'horodatage "Debug\Composant2.lastbuildstate".
-     1>Génération du projet "C:\Users\lambda\Downloads\test-master\test-master\test_composant2\Composant2\Composant2.vcxproj" terminée (build cible(s)).
+﻿Build started 21/05/2015 10:22:23.
+Project "\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Composant2\Composant2.vcxproj" on node 2 (rebuild target(s)).
+_PrepareForClean:
+  Deleting file "Debug\Composant2.lastbuildstate".
+InitializeBuildStatus:
+  Creating "Debug\Composant2.unsuccessfulbuild" because "AlwaysCreate" was specified.
+ClCompile:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\interfaces" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D COMPOSANT2_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yc"StdAfx.h" /Fp"Debug\Composant2.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt stdafx.cpp
+  stdafx.cpp
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\interfaces" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D COMPOSANT2_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Yu"StdAfx.h" /Fp"Debug\Composant2.pch" /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt Composant2.cpp
+  Composant2.cpp
+\\vmware-host\shared folders\documents\visual studio 2010\projects\partageable\composant2\composant2.cpp(40): warning C4244: 'argument' : conversion from 'double' to 'unsigned int', possible loss of data
+\\vmware-host\shared folders\documents\visual studio 2010\projects\partageable\composant2\composant2.cpp(73): warning C4244: 'argument' : conversion from 'double' to 'unsigned int', possible loss of data
+\\vmware-host\shared folders\documents\visual studio 2010\projects\partageable\composant2\composant2.cpp(79): warning C4018: '<' : signed/unsigned mismatch
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /I"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\interfaces" /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _WINDOWS /D _USRDLL /D COMPOSANT2_EXPORTS /D _WINDLL /D _UNICODE /D UNICODE /D _AFXDLL /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt dllmain.cpp
+  dllmain.cpp
+Link:
+  C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\Composant2.dll" /INCREMENTAL:NO /NOLOGO /MANIFEST /ManifestFile:"Debug\Composant2.dll.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\Composant2.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\Composant2.lib" /MACHINE:X86 /DLL Debug\Composant2.obj
+  Debug\dllmain.obj
+  Debug\stdafx.obj
+Composant2.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/INCREMENTAL:NO' specification
+     Creating library \\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\Composant2.lib and object \\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\Composant2.exp
+  Composant2.vcxproj -> \\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\Composant2.dll
+Manifest:
+  C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Debug\Composant2.dll;#2" /manifest Debug\Composant2.dll.intermediate.manifest "C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\Include\Manifest\dpiaware.manifest"
+FinalizeBuildStatus:
+  Deleting file "Debug\Composant2.unsuccessfulbuild".
+  Touching "Debug\Composant2.lastbuildstate".
+Done Building Project "\\vmware-host\Shared Folders\Documents\Visual Studio 2010\Projects\partageable\Composant2\Composant2.vcxproj" (rebuild target(s)).
 
-La génération a réussi.
+Build succeeded.
 
-Temps écoulé 00:00:00.72
+Time Elapsed 00:00:03.68

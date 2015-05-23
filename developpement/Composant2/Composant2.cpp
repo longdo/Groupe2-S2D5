@@ -24,7 +24,7 @@ CComposant2::CComposant2()
 //#include "stdafx.h"
 #include "Composant2.h"
 #include "Composant6.h" 
-#include "Composant7.h"
+#include "Composant7.h" 
 //#include "Composant2Version.h"
 
 
@@ -34,6 +34,14 @@ const double SPOT = 100;
 	Composant2::Composant2(){
 	};
 	double Composant2::doMonteCarlo(string typePayOff, double maturity, double strike, int nbIterations){
+		string s1= "NEGATIVE VALUE";
+		string s2= "MISSED DATA";
+		
+		if (typePayOff.empty() || maturity == NULL || strike == NULL || nbIterations == NULL)
+			throw s2;
+		else if (maturity < 0 || strike < 0 || nbIterations < 0)
+			throw s1;
+		
 		vector<double> vecteurPayOff(nbIterations);
 		double sumPayOff = 0;
 		//double* vectorFromC6_tmp;
@@ -44,7 +52,7 @@ const double SPOT = 100;
 		//Recuperation des n PayOff; soit n le nbIterations.
 		for (int i = 0; i < nbIterations; i++){
 			vectorFromC6_tmp = getPath(maturity, SPOT);//Recuperation des 504 VA
-			payOff_tmp = pricePath(typePayOff, vectorFromC6_tmp, strike, maturity);//Alimentation du C7 par le tableau des 504 VA, puis recuperation du payOff associe en fonction du type d option traite (asiat, euro ect.)
+			payOff_tmp = getPricePath(typePayOff, vectorFromC6_tmp, strike, maturity);//Alimentation du C7 par le tableau des 504 VA, puis recuperation du payOff associe en fonction du type d option traite (asiat, euro ect.)
 			vecteurPayOff.push_back(payOff_tmp);//Ajout du payOff dans le vecteur de PayOffs
 		}
 
@@ -52,14 +60,13 @@ const double SPOT = 100;
 		for (vector<double>::iterator j = vecteurPayOff.begin(); j != vecteurPayOff.end(); ++j){
 			sumPayOff = sumPayOff + *j;
 		}
-		string s1= "NEGATIVE VALUE";
-		string s2= "MISSED VALUE";
+
 		esperancePayOff = sumPayOff / nbIterations;
 
 		//EXCEPTION si l esperance du payoff est manquante ou negative
-		if (esperancePayOff == NULL)
+		if (esperancePayOff == NULL )// || typePayOff.empty() || maturity == NULL || strike == NULL || nbIterations == NULL)
 			throw s2;
-		else if (esperancePayOff < 0)
+		else if (esperancePayOff < 0 )//|| maturity < 0 || strike < 0 || nbIterations < 0)
 			throw s1;
 
 		//Calcul de l'esperance : Somme PayOff / Nb PayOff
@@ -71,7 +78,7 @@ const double SPOT = 100;
 		//Recupere un vector depuis Composant6::getChemin(int jours, double spot)
 		string s1 = "MISSED DATA", s2 = "NEGATIVE VALUE";
 		vector<double> path(maturity);
-		//path = getChemin(maturity, spot);
+		path = getChemin(maturity, spot);
 
 		if(path.size()<maturity)
 			throw s1;
@@ -84,7 +91,7 @@ const double SPOT = 100;
 		return path;
 	};
 
-	double Composant2::pricePath(string typePayOff, vector<double> vecteur, double strike, double maturity){
+	double Composant2::getPricePath(string typePayOff, vector<double> vecteur, double strike, double maturity){
 		//Recupere un double depuis Composant7::pricePath(String typePayOff, double path[], double strike, double maturity)
 		double priceOfPath = 0;
 		//Conversion du vector en double*
@@ -92,13 +99,13 @@ const double SPOT = 100;
 		string error1="MISSED DATA", error2 = "NEGATIVE VALUE", error3 = "VALUE GREATER THAN 1000000";
 
 		//priceOfPath = Composant7::pricePath(typePayOff, path, strike, maturity); - TODO
-		//priceOfPath = pricePath2(typePayOff, path, strike, maturity);
+		priceOfPath = pricePath(typePayOff, path, strike, maturity);
 		//EXCEPTION si la valeur retourne par C7 est manquante, negative ou > 1000000
-		if (priceOfPath == NULL)
+		if (priceOfPath == NULL || strike == NULL || maturity == NULL)
 			throw error1;
-		else if (priceOfPath < 0)
+		else if (priceOfPath < 0 || strike < 0 || maturity < 0)
 			throw error2;
-		else if (priceOfPath > 1000000)
+		else if (priceOfPath > 1000000)// || strike > 1000000 || maturity < 1000000)
 			throw error3;
 
 		return priceOfPath;
